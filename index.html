@@ -1,0 +1,150 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<title>microintel latex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            overflow-x: hidden;
+        }
+        .f1 {
+            letter-spacing: -1.2px;background-color: red;
+ color: white;
+ text-align:center;
+            border-radius: 1px;
+            padding: 3px;
+        }
+        .f2 {
+            letter-spacing: -1.2px;
+            padding: 3px;
+            text-align:center;
+            color: white;
+            border: 1.5px solid white;
+            border-left: 0;
+            border-right: 0;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type="text"] {
+            padding: 8px;
+            background-color: black;
+            border: 1px solid red;
+            color: white;
+        }
+        button {
+            padding: 6px;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+        input[type="text"]::placeholder {
+            color: white;
+        }
+        h4 {
+            color: white;
+        }
+        
+     .ccc{
+         height:250px;
+         display:flex;
+         width:290px;
+         margin-top:20px;
+         flex-direction:column;
+         gap:15px;
+         color:white;
+         overflow-y:scroll;
+     }
+     #mym{
+     height:100px;
+     background-color:black;
+     }
+     marquee{
+     color:white;
+     }
+    </style>
+</head>
+<body>
+    <center>
+        <br>
+        <img width="150px" height="60px" src="/storage/emulated/0/Download/latex.png">
+    </center>
+    <br><br>
+    <div>
+        <center>
+                <input id="ii1" oninput="xxx('t',this.value)" type="text" placeholder="MARVEL" required>
+                <br><br>
+                <input type="text" oninput="xxx('m',this.value)" id="ii2" placeholder="STUDIO" required>
+                <br>
+        </center>
+      
+        <div id="mym">
+            <h1><font id="t" class="f1"><b><span>MARVEL</span></b></font> <font id="m" class="f2"><b><span>STUDIO</span></b></font></h1>
+        </div>
+        <button onclick="dove()">download</button>
+        
+        <div class="ccc">
+        <details>
+        <summary>View More Example Templates</summary>
+        
+        <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/><br><br>
+        <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/>
+        <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/>
+        <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/>
+        <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/>
+        <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/>
+        
+         <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/><br><br>
+         
+                <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/><br><br>
+            
+           
+                <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/metam.jpg"/><br><br>
+            
+          
+                <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/moog.jpg"/><br><br>
+           
+           <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/msf.jpg"/><br><br>
+           
+           <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/gitmit.jpg"/><br><br>
+           
+           
+           <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/freemi.jpg"/><br><br>
+           
+           <img  width="280px" height="150px" src="https://microintel.github.io/Resources/images/dcmim.jpg"/><br><br>
+           
+           
+           <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/dreamM.jpg"/>
+          </details>
+        </div>
+    </div>
+    
+    <marquee>The platform is still in development and progressing steadily.</marquee>
+    <script>
+    
+    function dove(){
+    html2canvas(document.getElementById('mym'), {
+    useCORS: true,
+    scale: 1 
+    }).then(canvas => {
+    let link = document.createElement('a');
+    link.download = 'mi.png';
+    link.href = canvas.toDataURL('image/png');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    });
+    }
+    
+    
+    
+        function xxx(i, va) {
+            document.getElementById(i).innerHTML = va;
+        }
+    </script>
+</body>
+</html>
