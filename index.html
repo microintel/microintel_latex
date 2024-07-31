@@ -66,6 +66,17 @@
      marquee{
      color:white;
      }
+     summary{
+     color:white;
+     }
+     #vii{
+     display:none;
+     }
+     button{
+     border:1px solid red;
+     color:white;
+     border-radius:5px;
+     }
     </style>
 </head>
 <body>
@@ -79,7 +90,7 @@
                 <input id="ii1" oninput="xxx('t',this.value)" type="text" placeholder="MARVEL" required>
                 <br><br>
                 <input type="text" oninput="xxx('m',this.value)" id="ii2" placeholder="STUDIO" required>
-                <br>
+                <br><br>
         </center>
       
         <div id="mym">
@@ -90,6 +101,7 @@
         <div class="ccc">
         <details>
         <summary>View More Example Templates</summary>
+        <img width="280px" height="65px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/><br><br>
         
         <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/><br><br>
         <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/cnmim.jpg"/>
@@ -119,13 +131,35 @@
            
            
            <img width="280px" height="150px" src="https://microintel.github.io/Resources/images/dreamM.jpg"/>
+           
+           <br><br><center>
+           
+          <a href="#vii" ><button id="bt" onclick="vidd(this.id)">Play Demo Video.</button><br></a>
+          <br>
+           <video id="vii" src="https://microintel.github.io/Resources/videos/latexDespacito.mp4" width="280px" height="160px"></video>
+           
+           </center>
           </details>
         </div>
     </div>
     
+    
+    <br><br>
     <marquee>The platform is still in development and progressing steadily.</marquee>
     <script>
+    function vidd(x){
+    let v=document.getElementById('vii');
+    if(v.paused){
+    v.play();
+    v.style.display="block";
+    document.getElementById(x).innerHTML="Pause Video";
+    }
+    else{
     
+    v.pause()
+    document.getElementById(x).innerHTML="Play Video.";
+    }
+   }
     function dove(){
     html2canvas(document.getElementById('mym'), {
     useCORS: true,
